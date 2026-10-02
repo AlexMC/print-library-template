@@ -58,6 +58,6 @@ jobs:
             echo
             echo "$steps"
             echo
-            echo "Pull requests are checked by **Library check**. This library's viewer link: \`<viewer origin>/$REPOSITORY\`."
+            echo "Pull requests are checked by **Library check**. Once this library is public it opens in the viewer at https://print-library.alexcarvalho.me/$REPOSITORY."
           } > "$body"
           gh issue create --repo "$REPOSITORY" --title "Finish setup" --label "$SETUP_LABEL" --body-file "$body"

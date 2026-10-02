@@ -26,7 +26,7 @@ Open a new issue and choose **Print log**, **Model details** or **Workshop setup
 
 ## Open the library in the viewer
 
-Library links have the form `<viewer origin>/<owner>/<repository>`, for example `https://viewer.example.com/octo/prints`. Set `viewer_origin` in `library.json` to your viewer's origin (an `https://` origin with no path) so pull requests link to the drafted model in the viewer.
+A public library opens in the hosted viewer at `https://print-library.alexcarvalho.me/<owner>/<repository>`, for example `https://print-library.alexcarvalho.me/octo/prints`. `viewer_origin` in `library.json` names that viewer, so pull requests link to the drafted model in it. The hosted viewer reads public libraries only: in a private library, remove `viewer_origin` (pull requests then link to GitHub), or set it to your own viewer's origin (an `https://` origin with no path).
 
 ## Work with an agent
 
@@ -51,7 +51,7 @@ Good to know:
 
 - **Mind the upload limit.** The browser uploads at most 25 MiB per file. Files between 25 and 50 MiB come in through the agent or the library tool; the check rejects files above 50 MiB and Git LFS pointers.
 - **Before making the library public**, know that the viewer may load model files and thumbnails of public libraries through the jsDelivr CDN, which keeps copies permanently, even after you delete a file or make the repository private. Print logs and photos are never loaded through jsDelivr.
-- **Open the library in the viewer** at `<viewer origin>/<owner>/<repository>`, and set `viewer_origin` in `library.json` so pull requests link to it.
+- **Open the library in the viewer** at `https://print-library.alexcarvalho.me/<owner>/<repository>` once it is public. `viewer_origin` in `library.json` makes pull requests link there; remove it in a private library.
 
 ### Protect your library (optional)
 
