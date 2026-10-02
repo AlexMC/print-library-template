@@ -41,7 +41,7 @@ permissions:
   contents: read
 
 env:
-  TOOL_SHA256: "0d0c8f9ccfc9c0795696c15e9a77d88c0b05714301c4ab47d7bd146466474693"
+  TOOL_SHA256: "9b26ee7aedf76d34c6e59e352d06d4f393fd14293e9325ee8584e100afde6ef0"
 
 concurrency:
   group: library-issue-${{ github.event.issue.number || github.event.pull_request.head.ref }}

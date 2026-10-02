@@ -51,6 +51,7 @@ Good to know:
 
 - **Mind the upload limit.** The browser uploads at most 25 MiB per file. Files between 25 and 50 MiB come in through the agent or the library tool; the check rejects files above 50 MiB and Git LFS pointers.
 - **Before making the library public**, know that the viewer may load model files and thumbnails of public libraries through the jsDelivr CDN, which keeps copies permanently, even after you delete a file or make the repository private. Print logs and photos are never loaded through jsDelivr.
+- **In a public library, record each downloaded model's license.** A new model merges without one, but the next change to it fails the Library check (`LICENSE_REQUIRED_TO_CHANGE`) until its license is recorded. The bot's pull request links the **Complete model details** form for it.
 - **Open the library in the viewer** at `https://print-library.alexcarvalho.me/<owner>/<repository>` once it is public. `viewer_origin` in `library.json` makes pull requests link there; remove it in a private library.
 
 ### Protect your library (optional)
