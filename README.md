@@ -33,7 +33,7 @@ A public library opens in the hosted viewer at `https://print-library.alexcarval
 Install the agent skill in Claude Code with one command (it ships with its own copy of the library tool):
 
 ```sh
-claude plugin marketplace add AlexMC/3dhub && claude plugin install print-library@print-library
+claude plugin marketplace add AlexMC/print-library-plugin && claude plugin install print-library@print-library
 ```
 
 Inside this repository the agent runs this library's own `.library/tool.mjs`, adds models and versions with the same writers as the bot, checks its work, and opens pull requests from `library/agent/…` branches; it never merges or pushes to the default branch. Give it a fine-grained personal access token limited to this repository with **Contents** and **Pull requests** set to *Read and write* and no **Administration** or **Workflows** permission (`gh auth login --with-token`). Helper receipts it saves keep host paths in `*.local.json` files, which `.gitignore` keeps out of the repository.
